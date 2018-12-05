@@ -80,14 +80,31 @@ Articles:
     <img src="https://media.giphy.com/media/26ufaJh2hfUtuSo6s/giphy.gif">
 </center>
 
-The most beloved one... So many developers use this argument without being able to explain what is a "**strongly typed language**". Nowadays, for me types are about:
+The most beloved one... So many developers use this argument without being able to explain what is a "**strongly typed language**". Nowadays, for me types are many things at one time:
 
 - Types annotations (for development/debug purpose).
-- Memory management (manage VM stack and heap allocation, etc..).
-- Safety before runtime (error during compilation).
+- Memory management.
+- Runtime safety (AOT Compiler).
 
-Types annotations and Memory management can be achieved in modern JavaScript:
-- with TypeScript/Flow (even in pure JavaScript with JSDoc and d.ts file).
-- with TypedArray, ex: `new uint8Array([1, 2, 3])`
+The question is: can we achieve that in (**modern**) JavaScript ? **YES** !
 
-And the third is not possible because we run on `JIT` compiler. If you want these, just find the right language for the right need...
+### Types annotations
+Types annotations are possible in JavaScript with Flow and/or TypeScript. And with a modern editor (like VSCode) you can achieve the same in pure JavaScript with TypeScript definition files and/or JSDoc.
+
+Example of a pure JavaScript code:
+
+![](https://cdn.discordapp.com/attachments/157206345949511680/462556289302790154/add.PNG)
+
+### Memory management
+Modern JavaScript bring `TypedArray`, `ArrayBuffer` and even `SharedArrayBuffer` to allocate a given amount of bytes on RAM. (Note: Engines are free to implement what they want).
+
+Managing memory is a task that requires a high amount of rigor. Writing random types will never optimize the memory consumption of a program.
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays
+
+### Runtime safety
+Runtime safety is the ability for a program to throw "types" errors at compilation (with an AOT Compiler). JavaScript run with a JIT (Just in time) compiler, so this kind of security can't be achieved in the language itself.
+
+But nothing stop you from doing the exact same things with a strict TypeScript (errors will be throw at Compilation too).
+
+## JavaScript ecosystem isn't mature and reliable.
