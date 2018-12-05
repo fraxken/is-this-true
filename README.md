@@ -2,9 +2,11 @@
 
 > !!! WORK IN PROGRESS !!!
 
-These last years i've read a lot of arguments against Node.js and JavaScript. In this article I will try to navigate through these different reviews and answer them honestly.
+These last years i've read a lot of arguments against Node.js and JavaScript. In this article I will try to navigate through these different reviews and answer them **honestly**.
 
 Most criticism was often wrong (technically distorted or no longer relevant). Not to mention people who simply **hate** JavaScript with no real technical reason...
+
+The article does not aim to defend JavaScript (ECMAScript) against other languages/runtime etc..
 
 Let's start with the list below:
 
@@ -24,18 +26,34 @@ Let's start with the list below:
 
 These are the most popular arguments among **developers**. Note that there are very few critics of the gaps in the language itself (What I find today very surprising, i will back on it later).
 
-![](https://media.giphy.com/media/104c5NA7rLnCs8/giphy.gif)
+<center>
+    <img src="https://media.giphy.com/media/104c5NA7rLnCs8/giphy.gif">
+</center>
 
 ## JavaScript is not Object Oriented.
-JavaScript always supported the OOP with **prototypes** (The whole language has been designed with prototypes). Nowadays most people often tend to think that OOP is just about `class` keyword and nothing else (widely spread by `JAVA`, `C++`, `C#` etc...).
+JavaScript always supported the OOP with **prototypes** (The whole language has been designed with these). Most developers often tend to think that OOP is just about `class` keyword and nothing else (widely spread by `JAVA`, `C++`, `C#` etc...). Do not misunderstand me, i do not launch any attack against these languages !
 
-Nowadays, a lot of TypeScript developer trully beleve that JavaScript is not object oriented... This can be explained by the difficulty of understanding prototypes. Thing are getting better with modern JavaScript.
+The problem is very common within the community, a lot of TypeScript developer trully beleve that JavaScript is not object oriented... This can be explained by the difficulty of understanding prototypes.
+
+Fortunately things tend to improve with modern JavaScript.
+
+The bad kid will surely try to get back into the subject with the lack of **'Encapsulation'**.. But sorry we are in 2019 and ECMAScript now have a complete support !
+
+Sources:
+- [Learn prototypes from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 ## JavaScript is a `scripting` language.
-Arggg.. my heart ! This one is terrible because hater often use it to trash talk:
-> Yeah.. JavaScript ? A "scripting" language designed for (web) noob developer!
+Arggg...... my heart ! This one is terrible because haters often use it to trash talk:
+> A "scripting" language designed for web (noob) developer!
 
-Since ECMAScript 6, the specification describe the language as **A general purpose, cross-platform programming language**. This is why the language evolve these last years (to answers more production use cases).
+Yes, JavaScript was originally designed for the web (And I think this is a force for today's back-end developers).
+
+Since ECMAScript 6, the specification describe the language as **A general purpose, cross-platform programming language**. This explain why the language evolve these last years (to answers more production and enterprise use cases). Node.js surely played an important role in this.
+
+We will see at the end of the article some incomplete parts of ECMAScript.
+
+Sources:
+- https://www.ecma-international.org/publications/standards/Ecma-262.htm
 
 ## JavaScript is hard to learn because of Asynchronous
 JavaScript is **SYNCHRONOUS** ! These are mainly beginners who mix concepts between them (Promise, Node.js event-loop etc..). This is terrible because beginners suddenly have a tendency to believe that it is possible to launch code in parralel:
@@ -52,15 +70,20 @@ It's the worst thing possible (and it will achieve the same work as the code bel
 const result = [10 + 10, 10 + 5];
 ```
 
-These examples are very often used to explain Promises A/+.
+These examples are very often used to explain Promises A/+ which is unfortunately the opposite of a good practice within an event loop.
+
+Articles:
+- [How does javascript actually work](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
 
 ## JavaScript is weakly typed.
-![](https://media.giphy.com/media/26ufaJh2hfUtuSo6s/giphy.gif)
+<center>
+    <img src="https://media.giphy.com/media/26ufaJh2hfUtuSo6s/giphy.gif">
+</center>
 
 The most beloved one... So many developers use this argument without being able to explain what is a "**strongly typed language**". Nowadays, for me types are about:
 
 - Types annotations (for development/debug purpose).
-- Memory management (control the consumption of bytes in / out).
+- Memory management (manage VM stack and heap allocation, etc..).
 - Safety before runtime (error during compilation).
 
 Types annotations and Memory management can be achieved in modern JavaScript:
