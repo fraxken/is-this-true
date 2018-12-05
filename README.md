@@ -100,11 +100,20 @@ Modern JavaScript bring `TypedArray`, `ArrayBuffer` and even `SharedArrayBuffer`
 
 Managing memory is a task that requires a high amount of rigor. Writing random types will never optimize the memory consumption of a program.
 
+In a near future, WebAssembly will surely bring **even more control on memory**.
+
+Sources:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays
 
 ### Runtime safety
 Runtime safety is the ability for a program to throw "types" errors at compilation (with an AOT Compiler). JavaScript run with a JIT (Just in time) compiler, so this kind of security can't be achieved in the language itself.
 
 But nothing stop you from doing the exact same things with a strict TypeScript (errors will be throw at Compilation too).
+
+---
+
+To conclude: The Virtual Machine already optimize the code for you (V8 Turbofan will be responsible for inlining some parts of your code).
+
+Some cases required an AOT... It will be wiser to use `C` or `Rust` (or anything else ^^). But it doesn't mean you have to choose only one (nothing prevents you from creating a bindings).
 
 ## JavaScript ecosystem isn't mature and reliable.
