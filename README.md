@@ -6,7 +6,7 @@ These last years i've read a lot of arguments against Node.js and JavaScript. In
 
 Most criticism was often wrong (technically distorted or no longer relevant). Not to mention people who simply **hate** JavaScript with no real technical reason...
 
-The article does not aim to defend JavaScript (ECMAScript) against other languages/runtime etc..
+The article does not aim to defend JavaScript (ECMAScript) against other languages/runtime.. Sometimes you have to know how to choose the right language according to your project needs.
 
 Let's start with the list below:
 
@@ -37,26 +37,30 @@ The problem is very common within the community, a lot of TypeScript developer t
 
 Fortunately things tend to improve with modern JavaScript.
 
-The bad kid will surely try to get back into the subject with the lack of **'Encapsulation'**.. But sorry we are in 2019 and ECMAScript now have a complete support !
+The bad kid will surely try to get back into the subject with the lack of **'Encapsulation'**.. But sorry we are in 2019 and modern JavaScript bring encapsulation.
 
-Sources:
+> Note: There is no question of debating whether we have to replace object-oriented programming with functional one!
+
+Sources/Articles:
+- [JavaScript Objects Introduction](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects)
 - [Learn prototypes from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [New ECMAScript6 OOP features](http://2ality.com/2014/12/es6-oop.html)
+- [JavaScript inheritance](http://2ality.com/2012/01/js-inheritance-by-example.html)
 
 ## JavaScript is a `scripting` language.
-Arggg...... my heart ! This one is terrible because haters often use it to trash talk:
-> A "scripting" language designed for web (noob) developer!
+Arggg...... my heart ! This one is terrible because haters often use it to trash talk ...
 
-Yes, JavaScript was originally designed for the web (And I think this is a force for today's back-end developers).
+Yes, JavaScript was originally designed for the web. Since ECMAScript 6, the specification describe the language as **A general purpose, cross-platform programming language**.
 
-Since ECMAScript 6, the specification describe the language as **A general purpose, cross-platform programming language**. This explain why the language evolve these last years (to answers more production and enterprise use cases). Node.js surely played an important role in this.
+JavaScript is nowadays used across platforms (Cloud, Back-end, IoT, Robotics). So the language have to evolve to answer these platforms needs !
 
-We will see at the end of the article some incomplete parts of ECMAScript.
-
-Sources:
-- https://www.ecma-international.org/publications/standards/Ecma-262.htm
+Sources/Articles:
+- [ECMAScript Specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [JavaScript 2018 - Blog NPM](https://blog.npmjs.org/post/180868064080/this-year-in-javascript-2018-in-review-and-npms)
+- [Node.js EVERYWHERE](https://www.youtube.com/watch?v=NdISMdSDIaw)
 
 ## JavaScript is hard to learn because of Asynchronous
-JavaScript is **SYNCHRONOUS** ! These are mainly beginners who mix concepts between them (Promise, Node.js event-loop etc..). This is terrible because beginners suddenly have a tendency to believe that it is possible to launch code in parralel:
+JavaScript is **SYNCHRONOUS** ! These are mainly beginners who mix concepts between them (Promise, Node.js event-loop etc..). This is terrible because beginners suddenly start to believe that it is possible to launch code in parralel:
 
 ```js
 const result = await Promise.all([
@@ -80,7 +84,7 @@ Articles:
     <img src="https://media.giphy.com/media/26ufaJh2hfUtuSo6s/giphy.gif">
 </center>
 
-The most beloved one... So many developers use this argument without being able to explain what is a "**strongly typed language**". Nowadays, for me types are many things at one time:
+The most beloved one... So many developers use this argument without being able to explain what is a "**strongly typed language**". Nowadays, **for me** types are many things at one time:
 
 - Types annotations (for development/debug purpose).
 - Memory management.
@@ -108,12 +112,13 @@ Sources:
 ### Runtime safety
 Runtime safety is the ability for a program to throw "types" errors at compilation (with an AOT Compiler). JavaScript run with a JIT (Just in time) compiler, so this kind of security can't be achieved in the language itself.
 
-But nothing stop you from doing the exact same things with a strict TypeScript (errors will be throw at Compilation too).
+But nothing stop you from doing the exact same things with TypeScript (errors will be throw at Compilation too).
 
 ---
 
-To conclude: The Virtual Machine already optimize the code for you (V8 Turbofan will be responsible for inlining some parts of your code).
+Many people greatly underestimate the optimizations made by the modern virtual machine, take a look at these:
 
-Some cases required an AOT... It will be wiser to use `C` or `Rust` (or anything else ^^). But it doesn't mean you have to choose only one (nothing prevents you from creating a bindings).
+- [V8 TurboFan documentation](https://v8.dev/docs/turbofan)
+- [V8 Elements Kinds](https://v8.dev/blog/elements-kinds)
 
 ## JavaScript ecosystem isn't mature and reliable.
