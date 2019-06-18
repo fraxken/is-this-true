@@ -126,15 +126,28 @@ Many people greatly underestimate the optimizations made by the modern virtual m
 - [V8 Elements Kinds](https://v8.dev/blog/elements-kinds)
 
 ## JavaScript ecosystem isn't mature and reliable.
-This one has been surely introduced by the arrival of [NPM](https://www.npmjs.com/). JavaScript have a massive community and a big ecosystem (1,000,000+ packages on npm) with a lot of goods packages but also with a lot of **bad** designed packages (or packages that only contains one or two lines with no real interest).
+This one has been surely introduced by the arrival of [NPM](https://www.npmjs.com/). JavaScript have a massive community and a big ecosystem (**1,000,000+ packages on npm**) with a lot of goods packages but also with a lot of **bad** designed packages (or packages that only contains one or two lines with no real interest). There is no community where everything is white or black so please **stay respectful** (and it's the same for javascript developers).
 
-Most of the problems we have come mostly from:
-- Very low entry barrier (**which is very positive**).
-- ECMAScript never break.. your code will still work in twenty years (everyone seems to forget but it create a lot of problems on how we deal with the language design).
+> Note: This does not mean that there is no point in making a package even for a need that takes two lines (example: [flatstr](https://github.com/davidmarkclements/flatstr)).
+
+However you'r free to choose and use a package or not. Some packages are created with simplicity in mind, others with more complicated layers (they surely score higher on performance & security checks .. but with an accessibility cost). People are just trash talking a whole ecosystem because of "**few**" packages.
+
+Note that it is often not possible to compare ecosystems with each other because they are not comparable:
+- We have very low entry barrier (**which is very positive**).
+- ECMAScript never break. Your code will still work in twenty years (everyone seems to forget about this.. but it create a lot of problems on how we deal with the language day to day).
 - Lack of STD (Proposals in progress: https://github.com/tc39/proposal-javascript-standard-library)
 
-But dear good... You'r free to choose and use a package or not. Some packages are created with simplicity in mind, others with more complicated layers (they surely score higher on performance & security checks .. but with an accessibility cost). People are just trash talking a whole ecosystem because of "few" packages.
-
-I met someone who told me that copy/paste code was better.. 😬
-
 ## V8 Engine is not a "mature" Virtual Machine.
+
+It's a much rarer criticism but i've already met him a few times. To begin, you must know that V8 engine [has celebrated its ten years](https://v8.dev/blog/10-years) recently.
+
+**Compiler** and **Virtual Machine** are complicated projects that evolve every day. Of course we have mastered some optimization patterns since 10/20 years (or even more) but this does not mean that nothing remains to be optimized ! (Look JAVA with [GraalVM](https://www.graalvm.org/)).
+
+V8 Engine is nowadays one of the most powerful JIT... So what do you mean by "**matury**" ?.
+
+<p align="center">source: https://blog.cloudflare.com/cloudflare-workers-unleashed/<p>
+<p align="center">^
+<img src="./images/cloudflare.png">
+</p>
+
+## Node.js runtime is not configurable as JAVA EE (example).
