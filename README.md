@@ -33,7 +33,7 @@ These are the most popular arguments among **developers**. Note that there are v
 ## JavaScript is not Object Oriented.
 JavaScript always supported the OOP with **prototypes** (The whole language has been designed with these). Most developers often tend to think that OOP is just about `class` keyword and nothing else (widely spread by `JAVA`, `C++`, `C#` etc...). Do not misunderstand me, i do not launch any attack against these languages !
 
-The problem is very common within the community, a lot of TypeScript developer trully beleve that JavaScript is not object oriented... This can be explained by the difficulty of understanding prototypes.
+The problem is very common within the community, a lot of TypeScript developers trully beleve that JavaScript is not object oriented... This can surely be explained by the difficulty of understanding prototypes and how things work behind the hood.
 
 Fortunately things tend to improve with modern JavaScript.
 
@@ -50,7 +50,7 @@ Sources/Articles:
 ## JavaScript is a `scripting` language.
 Arggg...... my heart ! This one is terrible because haters often use it to trash talk ...
 
-Yes, JavaScript was originally designed for the web. Since ECMAScript 6, the specification describe the language as **A general purpose, cross-platform programming language**.
+Yes, JavaScript was originally designed for the web in 10 days. Since ECMAScript 6, the specification describe the language as **A general purpose, cross-platform programming language**.
 
 JavaScript is nowadays used across platforms (Cloud, Back-end, IoT, Robotics). So the language have to evolve to answer these platforms needs !
 
@@ -78,19 +78,20 @@ These examples are very often used to explain Promises A/+ which is unfortunatel
 
 Articles:
 - [How does javascript actually work](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
+- [What's happening inside Node.js ?](https://www.youtube.com/watch?v=C8dwQw7M8Pk)
 
 ## JavaScript is weakly typed.
 <center>
     <img src="https://media.giphy.com/media/26ufaJh2hfUtuSo6s/giphy.gif">
 </center>
 
-The most beloved one... So many developers use this argument without being able to explain what is a "**strongly typed language**". Nowadays, **for me** types are many things at one time:
+So many developers use this argument without being able to explain what is a "**strongly typed language**" (often the same who think that makes Javascript "**slow**" 🙉). Nowadays, **for me** types are many things at one time:
 
 - Types annotations (for development/debug purpose).
 - Memory management.
-- Runtime safety (AOT Compiler).
+- Runtime safety (comes often with an [AOT](https://en.wikipedia.org/wiki/Ahead-of-time_compilation) Compiler).
 
-The question is: can we achieve that in (**modern**) JavaScript ? **YES** !
+The question is: can we achieve that in (**modern**) JavaScript ? **YES SURE** !
 
 ### Types annotations
 Types annotations are possible in JavaScript with Flow and/or TypeScript. And with a modern editor (like VSCode) you can achieve the same in pure JavaScript with TypeScript definition files and/or JSDoc.
@@ -104,13 +105,16 @@ Modern JavaScript bring `TypedArray`, `ArrayBuffer` and even `SharedArrayBuffer`
 
 Managing memory is a task that requires a high amount of rigor. Writing random types will never optimize the memory consumption of a program.
 
-In a near future, WebAssembly will surely bring **even more control on memory**.
+In a near future, WebAssembly and new ECMAScript features will surely bring **even more control on memory**.
 
 Sources:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays
+- https://github.com/tc39/proposal-weakrefs (stage 3)
 
 ### Runtime safety
 Runtime safety is the ability for a program to throw "types" errors at compilation (with an AOT Compiler). JavaScript run with a JIT (Just in time) compiler, so this kind of security can't be achieved in the language itself.
+
+> ⚠️ However there is more and more work to implement new collection that bring more safety at the runtime.
 
 But nothing stop you from doing the exact same things with TypeScript (errors will be throw at Compilation too).
 
