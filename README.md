@@ -31,30 +31,33 @@ These are the most popular arguments among **developers**. Note that there are v
 </center>
 
 ## JavaScript is not Object Oriented.
-JavaScript always supported the OOP with **prototypes** (The whole language has been designed with these). Most developers often tend to think that OOP is just about `class` keyword and nothing else (widely spread by `JAVA`, `C++`, `C#` etc...). Do not misunderstand me, i do not launch any attack against these languages !
+JavaScript always supported the OOP with **prototypes** (The whole language has been designed with these). Most developers often tend to think that **OOP** is just about `class` or similar **wide-spread inherance patterns** (like `JAVA`, `C++`, `C#` etc...).
 
 The problem is very common within the community, a lot of TypeScript developers trully beleve that JavaScript is not object oriented... This can surely be explained by the difficulty of understanding prototypes and how things work behind the hood.
 
 Fortunately things tend to improve with modern JavaScript.
 
-The bad kid will surely try to get back into the subject with the lack of **'Encapsulation'**.. But sorry we are in 2019 and modern JavaScript bring encapsulation.
+Even the definition of OOP is not clear either by the way.. I guess everyone should read this: [proposal for Simplified, Modern Definitions of "Object" and "Object Oriented"](https://wcook.blogspot.com/2012/07/proposal-for-simplified-modern.html).
 
-> Note: There is no question of debating whether we have to replace object-oriented programming with functional one!
+> Note: My goal here was not debating whether we have to use OOP or ADT...
 
 Sources/Articles:
+- [On Understanding Data Abstraction, Revisited](http://www.cs.utexas.edu/~wcook/Drafts/2009/essay.pdf)
+- [Programming Paradigms for Dummies: What Every Programmer Should Know](https://www.info.ucl.ac.be/~pvr/VanRoyChapter.pdf)
 - [JavaScript Objects Introduction](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects)
 - [Learn prototypes from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [New ECMAScript6 OOP features](http://2ality.com/2014/12/es6-oop.html)
 - [JavaScript inheritance](http://2ality.com/2012/01/js-inheritance-by-example.html)
 
 ## JavaScript is a `scripting` language.
-Arggg...... my heart ! This one is terrible because haters often use it to trash talk ...
+Arggg...... my heart ! This one is terrible because haters often use it to trash talk...
 
 Yes, JavaScript was originally designed for the web in 10 days. Since ECMAScript 6, the specification describe the language as **A general purpose, cross-platform programming language**.
 
-JavaScript is nowadays used across platforms (Cloud, Back-end, IoT, Robotics). So the language have to evolve to answer these platforms needs !
+JavaScript is nowadays used across platforms (Cloud, Back-end, IoT, Robotics). So the language have to evolve to answer these platforms needs!
 
 Sources/Articles:
+- [JavaScript: The First 20 Years](https://zenodo.org/record/3710954#.XoWSPogzaUk)
 - [ECMAScript Specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 - [JavaScript 2018 - Blog NPM](https://blog.npmjs.org/post/180868064080/this-year-in-javascript-2018-in-review-and-npms)
 - [Node.js EVERYWHERE](https://www.youtube.com/watch?v=NdISMdSDIaw)
@@ -146,8 +149,8 @@ It's a much rarer criticism but i've already met him a few times. To begin, you 
 V8 Engine is nowadays one of the most powerful JIT... So what do you mean by "**matury**" ?.
 
 <p align="center">source: https://blog.cloudflare.com/cloudflare-workers-unleashed/<p>
-<p align="center">^
-<img src="./images/cloudflare.png">
+<p align="center">
+    <img src="./images/cloudflare.png">
 </p>
 
 ## Node.js runtime is not configurable as JAVA EE (example).
